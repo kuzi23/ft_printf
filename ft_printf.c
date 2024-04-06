@@ -3,27 +3,51 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 05:47:46 by kuzi              #+#    #+#             */
-/*   Updated: 2024/04/05 06:25:48 by kuzi             ###   ########.fr       */
+/*   Updated: 2024/04/06 17:14:06 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-int ft_printf(const char *str, ...);
+#include "ft_printf.h"
 
-typedef struct s_print
+t_print *ft_inialise_tab(t_print *tab)
 {
-    va_list args; // to print out args
-    int wdt; // width
-    int prc; //precision
-    int zero; //zero padding 
-    int pnt; // .
-    int dash; // -
-    int tl; // total_length (return value)
-    int sign; //pos or neg number 
-    int is_zero; // is number zero
-    int perc; // %
-    int sp; // space flag ' '
-} t_print;
+    tab->wdt = 0;
+    tab->prc = 0;
+    tab->zero = 0;
+    tab->pnt = 0;
+    tab->dash = 0;
+    tab->tl = 0;
+    tab->sign = 0;
+    tab->is_zero = 0;
+    tab->perc = 0;
+    tab->sp = 0;
+    return (tab);
+}
+// we set every value of the flags to zero in order to help 
+// in controlling on how its going to work
+// we going to create a loop that controls everything;
+
+int ft_printf(const char *format, ...)
+{
+    int i;
+    int ret;
+    t_print *tab;
+
+    tab = (t_print *)malloc(sizeof(t_print));
+    if(!tab)
+    {
+        return (-1);
+    }
+    ft_inialise_tab(tab);
+    i = -1
+    ret = 0;
+    while (format[++i] && format[i + 1] != '\0')
+    {
+        if (format[i] == '%')
+            i = ft_evalformat(tab);
+    }
+}
+
