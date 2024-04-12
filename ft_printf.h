@@ -6,9 +6,11 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:54:25 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/06 18:56:42 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/04/12 18:42:45 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 #pragma once
 #include <stdio.h>
@@ -39,3 +41,6 @@ int	evalformat(t_print tab, char str, int i);
 int	ft_isdigit(int dg);
 int	ft_istype(int c);
 int	ft_isspec(int c);
+
+/*csiupdXx%*/
+void ft_print_char(t_print *tab);
