@@ -6,7 +6,7 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:54:25 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/13 19:44:34 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/04/13 20:17:45 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,3 +50,4 @@ void	ft_print_str(t_print *tab);
 void	ft_print_decimal(t_print *tab);
 void	ft_print_hex_upper(t_print *tab);
 void	ft_print_hex(t_print *tab);
+void	ft_print_perc(t_print *tab);
