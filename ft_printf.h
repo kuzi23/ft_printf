@@ -6,7 +6,7 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:54:25 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/12 18:42:45 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/04/13 19:44:34 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct s_print
 	int is_zero; // is number zero
 	int perc; // %
 	int sp; // space flag ' '
-} t_print;
+}	t_print;
 
 /*eval format */
 int	evalformat(t_print tab, char str, int i);
@@ -43,4 +43,10 @@ int	ft_istype(int c);
 int	ft_isspec(int c);
 
 /*csiupdXx%*/
-void ft_print_char(t_print *tab);
+void	ft_print_char(t_print *tab);
+void	ft_print_ptr(t_print *tab);
+void	ft_print_unsigned(t_print *tab);
+void	ft_print_str(t_print *tab);
+void	ft_print_decimal(t_print *tab);
+void	ft_print_hex_upper(t_print *tab);
+void	ft_print_hex(t_print *tab);
