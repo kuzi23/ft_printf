@@ -6,7 +6,7 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:07:00 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/13 20:11:26 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/04/20 19:06:54 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_print_perc(t_print *tab)
 {
 	write(1, '%', 1);
-	tab->tl++;
+	tab->wdt++;
 }

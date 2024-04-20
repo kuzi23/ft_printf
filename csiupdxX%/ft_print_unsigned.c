@@ -6,7 +6,7 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:47:10 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/13 16:49:47 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/04/20 19:08:37 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void	ft_print_unsigned(t_print *tab)
 	if (!str)
 		return ;
 	ft_putstr_fd(str, 1);
-	tab->tl += ft_strlen(str);
+	tab->wdt += ft_strlen(str);
 	free(str);
 }

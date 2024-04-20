@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_str.c                                     :+:      :+:    :+:   */
+/*   ft_evalfomat.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 18:10:03 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/20 19:08:22 by mkwizera         ###   ########.fr       */
+/*   Created: 2024/04/20 20:01:15 by mkwizera          #+#    #+#             */
+/*   Updated: 2024/04/20 20:09:46 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_print_str(t_print *tab)
+void    handle_flags(const char *format, int *index, t_print *tab, char *output)
 {
-	char	*str;
+    char c;
+    
+    c = format[*index];
+}
 
-	str = va_arg(tab->args, char *);
-	if (!str)
-		str = "(null)";
-	while (*str)
-	{
-		write(1, str, 1);
-		str++;
-		tab->wdt++;
-	}
-	free(str);
+//aha nugushyiraho indi handler yama printout ubundi bikaba birabaye
+
+int	evalformat(t_print *tab, char str, int i)
+{
 }

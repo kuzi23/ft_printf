@@ -6,29 +6,28 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 05:47:46 by kuzi              #+#    #+#             */
-/*   Updated: 2024/04/12 16:00:06 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/04/20 19:40:52 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_print	*ft_inialise_tab(t_print *tab)
-{
-	tab->wdt = 0;
-	tab->prc = 0;
-	tab->zero = 0;
-	tab->pnt = 0;
-	tab->dash = 0;
-	tab->tl = 0;
-	tab->sign = 0;
-	tab->is_zero = 0;
-	tab->perc = 0;
-	tab->sp = 0;
-	return (tab);
-}
+
 // we set every value of the flags to zero in order to help 
 // in controlling on how its going to work
 // we going to create a loop that controls everything;
+t_print	*ft_inialise_tab(t_print *tab)
+{
+	tab->spec = 0;
+	tab->wdt = 0;
+	tab->prec = -1;
+	tab->zero = 0;
+	tab->dash = 0;
+	tab->hash = 0;
+	tab->sign = 0;
+	tab->sp = 0;
+	return (tab);
+}
 
 int	ft_printf(const char *format, ...)
 {

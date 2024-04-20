@@ -6,7 +6,7 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:05:14 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/12 21:02:31 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/04/20 19:07:02 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_print_char(t_print *tab)
 
 	c = va_arg(tab->args, int);
 	ft_putchar_fd (c, 1);
-	tab->tl++;
+	tab->wdt++;
 }
