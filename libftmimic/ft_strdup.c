@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 18:05:14 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 19:48:49 by mkwizera         ###   ########.fr       */
+/*   Created: 2024/03/02 12:57:08 by mkwizera          #+#    #+#             */
+/*   Updated: 2024/05/01 17:54:13 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(t_print *tab)
+char	*ft_strdup(const char *s1)
 {
-	char	c;
-	int count;
+	size_t	size;
+	char	*dest;
+	size_t	i;
 
-	count = 0;
-	c = va_arg(tab->args, int);
-	count += ft_putchar_fd(c);
-	return (count);
+	size = ft_strlen(s1);
+	dest = (char *)malloc(size + 1);
+	if (dest == NULL)
+	{
+		return (NULL);
+	}
+	i = 0;
+	while (s1[i] != '\0' && i < size)
+	{
+		dest[i] = s1[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

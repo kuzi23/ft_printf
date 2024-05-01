@@ -6,7 +6,7 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 13:13:29 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/20 19:54:01 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/04/27 14:52:09 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ void	tab_zero_padding(char *output, int width)
 	}
 }
 
-void	tab_wdt_adj(const char *format, int *index, t_print *tab, va_list args)
+void	tab_wdt_adj(const char *format, int *index, t_print *tab)
 {
 	if (format[*index] == '*')
 	{
-		tab->wdt = va_arg(args, int);
+		tab->wdt = va_arg(tab->args, int);
 		if (format[*index] < 0)
 		{
 			tab->dash = 1;
@@ -69,11 +69,11 @@ void	tab_wdt_adj(const char *format, int *index, t_print *tab, va_list args)
 	}
 }
 
-void	tab_prec_adj(const char *format, int *index, t_print *tab, va_list args)
+void	tab_prec_adj(const char *format, int *index, t_print *tab)
 {
 	if (format[*index] == '*')
 	{
-		tab->prec = va_arg(args, int);
+		tab->prec = va_arg(tab->args, int);
 		(*index)++;
 	}
 	else if (isdigit(format[*index]))

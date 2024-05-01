@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 18:05:14 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 19:48:49 by mkwizera         ###   ########.fr       */
+/*   Created: 2024/03/02 20:20:42 by mkwizera          #+#    #+#             */
+/*   Updated: 2024/05/01 17:53:08 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(t_print *tab)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	char	c;
-	int count;
+	unsigned char	*str;
+	size_t			i;
 
-	count = 0;
-	c = va_arg(tab->args, int);
-	count += ft_putchar_fd(c);
-	return (count);
+	i = 0;
+	str = s;
+	while (i < n)
+	{
+		str[i] = c;
+		i++;
+	}
+	return (s);
 }

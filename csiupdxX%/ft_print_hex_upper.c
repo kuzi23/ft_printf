@@ -6,30 +6,31 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 19:43:24 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/20 19:07:17 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/01 19:51:15 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_print_hex_upper(t_print *tab)
+int	ft_print_hex_upper(t_print *tab)
 {
 	unsigned int	num;
 	char			*str;
+	unsigned int	count;
 
+	count = 0;
 	num = va_arg(tab->args, unsigned int);
 	str = ft_utoa_hex(num, 'A');
 	if (!str)
 	{
-		ft_putstr_fd("(null)", 1);
-		tab->wdt += 6;
-		return ;
+		count += ft_putstr_fd("(null)");
+		return (0);
 	}
 	while (*str)
 	{
-		ft_putchar_fd (*str, 1);
+		count += ft_putchar_fd (*str);
 		str++;
-		tab->wdt++;
 	}
 	free(str);
+	return (count);
 }

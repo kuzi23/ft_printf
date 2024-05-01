@@ -1,0 +1,35 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/03/09 13:59:41 by mkwizera          #+#    #+#              #
+#    Updated: 2024/05/01 18:53:05 by mkwizera         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+SRC = $(wildcard *.c) #this will automaically find all c. files im the current directory
+OBJ = $(SRC:.c=.o)
+NAME =ft_print.a
+
+.PHONY: all clean fclean re
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJ)
+
+fclean: clean 
+	rm -f $(NAME)
+
+re: clean all  

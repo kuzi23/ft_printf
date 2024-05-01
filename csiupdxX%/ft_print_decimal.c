@@ -6,30 +6,31 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:22:21 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/20 19:07:50 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/01 19:47:35 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_print_decimal(t_print *tab)
+int	ft_print_decimal(t_print *tab)
 {
 	int		num;
 	char	*str;
+	int		count;
 
+	count = 0;
 	num = va_arg(tab->args, int);
 	str = ft_atoi(num);
 	if (!str)
 	{
-		ft_putstr_fd("(null)", 1);
-		tab->wdt += 6;
+		count += ft_putstr_fd("(null)");
 		return ;
 	}
 	while (*str)
 	{
-		ft_putchar_fd (*str, 1);
+		count += ft_putchar_fd(*str);
 		str++;
-		tab->wdt++;
 	}
 	free(str);
+	return (count);
 }

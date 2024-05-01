@@ -6,17 +6,16 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:54:25 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/20 20:00:12 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/01 19:45:34 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #pragma once
 #include <stdio.h>
 #include <unistd.h>
 #include <stdarg.h>
 #include <stdlib.h>
+
 
 typedef struct s_print
 {
@@ -31,8 +30,11 @@ typedef struct s_print
 	int	sp; // space flag ' '
 }	t_print;
 
+/*ft_printf*/
+int	ft_printf(const char *format, ...);
+
 /*eval format */
-int	evalformat(t_print tab, char str, int i);
+void	evalformat(t_print tab, const char str, int i);
 
 /*flags_utils*/
 int	ft_isdigit(int dg);
@@ -48,10 +50,26 @@ void	ft_print_decimal(t_print *tab);
 void	ft_print_hex_upper(t_print *tab);
 void	ft_print_hex(t_print *tab);
 void	ft_print_perc(t_print *tab);
+
+/*libftmimic*/
+int	ft_atoi(const char *str);
+int	ft_isdigit(int dg);
+char	*ft_itoa(int num);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+void	*ft_memset(void *s, int c, size_t n);
+char	*ft_ptrtoa(void *ptr);
+char	*ft_strdup(const char *s1);
+size_t	ft_strlen(const char *str);
+char	*ft_utoa_hex(int num, char c);
+char	*ft_utoa(int num);
+int	ft_putchar_fd(char z);
+int	ft_putstr_fd(char *str);
+
 /*flags_handlers*/
 void	tab_sign(char *output);
 void	tab_sp(char *output);
 void	tab_zero_padding(char *output, int width);
-void	tab_prec_adj(const char *format, int *index, t_print *tab, va_list args);
-void	tab_wdt_adj(const char *format, int *index, t_print *tab, va_list args);
+void	tab_prec_adj(const char *format, int *index, t_print *tab);
+void	tab_wdt_adj(const char *format, int *index, t_print *tab);
+
 // remaining alignment na specification of altenate form #

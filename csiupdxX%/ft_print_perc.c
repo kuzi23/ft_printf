@@ -6,14 +6,14 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:07:00 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/20 19:06:54 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/01 21:05:33 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_print_perc(t_print *tab)
+int	ft_print_perc(t_print *tab)
 {
 	write(1, '%', 1);
-	tab->wdt++;
+	return (1);
 }

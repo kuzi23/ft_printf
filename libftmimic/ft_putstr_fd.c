@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 18:05:14 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 19:48:49 by mkwizera         ###   ########.fr       */
+/*   Created: 2024/03/04 09:43:18 by kuzi              #+#    #+#             */
+/*   Updated: 2024/05/01 19:45:19 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(t_print *tab)
+int	ft_putstr_fd(char *str)
 {
-	char	c;
-	int count;
-
-	count = 0;
-	c = va_arg(tab->args, int);
-	count += ft_putchar_fd(c);
-	return (count);
+	if (!str)
+		return ;
+	while (*str != '\0')
+	{
+		ft_putchar_fd(*str);
+		str++;
+	}
+	return (1);
 }

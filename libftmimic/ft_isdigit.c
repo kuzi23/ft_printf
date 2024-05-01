@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 18:05:14 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 19:48:49 by mkwizera         ###   ########.fr       */
+/*   Created: 2024/03/02 12:32:06 by mkwizera          #+#    #+#             */
+/*   Updated: 2024/05/01 17:50:43 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(t_print *tab)
+int	ft_isdigit(int dg)
 {
-	char	c;
-	int count;
-
-	count = 0;
-	c = va_arg(tab->args, int);
-	count += ft_putchar_fd(c);
-	return (count);
+	if (dg >= 48 && dg <= 57)
+	{
+		return (1);
+	}
+	return (0);
 }
