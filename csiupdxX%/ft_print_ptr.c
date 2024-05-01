@@ -6,7 +6,7 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 15:16:24 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 21:10:00 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/01 21:13:15 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@ int	ft_print_ptr(t_print *tab)
 	char	*str;
 	int		count;
 
+	count = 0;
 	ptr = va_arg(tab->args, void *);
 	str = ft_ptrtoa(ptr);
 	if (!str)
 		return ;
 	count += ft_putstr_fd(str);
 	free(str);
-	return(count)
+	return (count);
 }
