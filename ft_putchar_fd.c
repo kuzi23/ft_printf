@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_decimal.c                                 :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 18:22:21 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/05 08:22:48 by kuzi             ###   ########.fr       */
+/*   Created: 2024/03/04 09:52:05 by kuzi              #+#    #+#             */
+/*   Updated: 2024/05/01 19:44:07 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_decimal(int num)
-{
-	char	*str;
-	int		count;
 
-	count = 0;
-	str = ft_atoi(num);
-	if (!str)
-	{
-		count += ft_putstr_fd("(null)");
-		return ;
-	}
-	while (*str)
-	{
-		count += ft_putchar_fd(*str);
-		str++;
-	}
-	free(str);
-	return (count);
+int	ft_putchar_fd(char z)
+{
+	write(1, &z, 1);
+	return (1);
 }

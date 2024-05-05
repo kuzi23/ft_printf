@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 18:47:10 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/05 09:19:51 by kuzi             ###   ########.fr       */
+/*   Created: 2024/03/04 09:43:18 by kuzi              #+#    #+#             */
+/*   Updated: 2024/05/05 11:27:02 by kuzi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_print_unsigned(unsigned int num)
+int	ft_putstr_fd(char *str)
 {
-	int		count;
-	char	*str;
-
-	count = 0;
-	str = ft_utoa(num);
 	if (!str)
 		return (0);
-	count += ft_putstr_fd(str);
-	return (count);
+	while (*str != '\0')
+	{
+		ft_putchar_fd(*str);
+		str++;
+	}
+	return (1);
 }

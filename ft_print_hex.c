@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utoa_hex.c                                      :+:      :+:    :+:   */
+/*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 17:18:33 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 17:57:47 by mkwizera         ###   ########.fr       */
+/*   Created: 2024/04/13 16:57:54 by mkwizera          #+#    #+#             */
+/*   Updated: 2024/05/05 11:24:11 by kuzi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-// # include <stdio.h>
-// # include <unistd.h>
-// # include <stddef.h>
-// # include <stdlib.h>
-// # include <ctype.h>
-// # include <string.h>
 
 int	ft_countsize(int n)
 {
@@ -35,9 +29,6 @@ int	ft_countsize(int n)
 	return (size);
 }
 
-// haraburaho boro za  negative ariko ziroroshye
-// nukongeramo statement gusa
-
 char	*ft_utoa_hex(int num, char c)
 {
 	int		digit_count;
@@ -46,7 +37,7 @@ char	*ft_utoa_hex(int num, char c)
 
 	digit_count = 0;
 	if (num == 0)
-		return (strdup("0"));
+		return (ft_strdup("0"));
 	digit_count += ft_countsize(num);
 	str = (char *)malloc(sizeof(char) * (digit_count + 1));
 	if (!str)
@@ -66,13 +57,18 @@ char	*ft_utoa_hex(int num, char c)
 	return (str);
 }
 
-// int main() {
-//     int numbers[] = {0, 10, 255, -1, -255};
-//     int num_elements = sizeof(numbers) / sizeof(numbers[0]);
-//     // Test each number
-//     for (int i = 0; i < num_elements; i++) {
-//         printf("Number: %d, Hexadecimal Representation: %s\n", numbers[i],
-// ft_utoa_hex(numbers[i], 'A'));
-//     }
-//     return 0;
-// }
+int	ft_print_hex(unsigned int num)
+{
+	char			*str;
+	unsigned int	count;
+
+	count = 0;
+	str = ft_utoa_hex(num, 'a');
+	while (*str)
+	{
+		count += ft_putchar_fd (*str);
+		str++;
+	}
+	free(str);
+	return (count);
+}

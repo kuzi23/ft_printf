@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 15:21:36 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 17:51:09 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:08:33 by kuzi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_countsize(int n)
 char	*handle_special_cases(int num)
 {
 	if (num == 0)
-		return (ft_strdup("0"));
+		write(1, "0", 1);
 	if (num == -2147483648)
 		return (ft_strdup("-2147483648"));
 	return (NULL);
