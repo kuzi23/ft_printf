@@ -3,22 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:05:14 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 19:48:49 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/05 09:06:57 by kuzi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(t_print *tab)
+int	ft_putchar_fd(char z)
+{
+	write(1, &z, 1);
+	return (1);
+}
+
+int	ft_print_char(char c)
 {
 	char	c;
 	int count;
 
 	count = 0;
-	c = va_arg(tab->args, int);
 	count += ft_putchar_fd(c);
 	return (count);
 }

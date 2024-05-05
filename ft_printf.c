@@ -3,53 +3,67 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 05:47:46 by kuzi              #+#    #+#             */
-/*   Updated: 2024/05/01 18:06:16 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/05 09:46:55 by kuzi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_print	*ft_inialise_tab(t_print *tab)
+int evalformat(char c, va_list args) 
 {
-	tab->spec = 0;
-	tab->wdt  = 0;
-	tab->prec = -1;
-	tab->zero = 0;
-	tab->dash = 0;
-	tab->hash = 0;
-	tab->sign = 0;
-	tab->sp = 0;
-	return (tab);
+    int count = 0;
+    if (c == 'c')
+	{
+        char ch;
+		
+		ch = va_arg(args, int);
+        count += write(1, &ch, 1);
+    }
+	else if (c == 's')
+		count += ft_print_str(va_arg(args, char *));
+	else if (c == 'i' || c == 'd')
+		count += ft_print_decimal(va_arg(args, int));
+	else if (c == 'u')
+		count += ft_print_unsigned(va_arg(args, unsigned int));
+	else if (c == 'p')
+		count += ft_print_ptr(va_arg(args, void *));
+	else if (c == 'x')
+		count += ft_print_hex(va_arg(args, unsigned int));
+	else if (c == 'X')
+		count += ft_print_hex_upper(va_arg(args, unsigned int));
+	else if (c == '%')
+	{
+		count += write(1, "%", 1);
+	}
+    return (count);
 }
 
-int	ft_printf(const char *format, ...)
+int ft_printf(const char *format, ...)
 {
-	int		i;
-	int		ret;
-	t_print	*tab;
-
-	tab = (t_print *)malloc(sizeof(t_print));
-	if (!tab)
+    int ret = 0;
+    va_list args;
+    va_start(args, format);
+    
+    while (*format)
 	{
-		return (0);
-	}
-	ft_inialise_tab(tab);
-	va_start(tab->args, format);
-	i = -1;
-	ret = 0;
-	while (format[++i] && format[i + 1] != '\0')
-	{
-		if (format[i] == '%')
-			evalformat( *tab, format, i+1);
-		else
+        if (*format == '%') {
+            format++;
+            ret += evalformat(*format, args);
+        } else
 		{
-			ret += write(1, &format[i], 1);
-		}
-	}
-	va_end(tab->args);
-	free(tab);
-	return(ret);
+            ret += write(1, format, 1);
+        }
+        format++;
+    }
+    
+    va_end(args);
+    return (ret);
+}
+
+int main()
+{
+    ft_printf("hello  rose \n", "marius");
 }

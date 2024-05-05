@@ -3,25 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:47:10 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/20 19:08:37 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/05 09:19:51 by kuzi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_print_unsigned(t_print *tab)
+void	ft_print_unsigned(unsigned int num)
 {
-	int		num;
+	int		count;
 	char	*str;
 
-	num = va_arg(tab->args, unsigned int);
+	count = 0;
 	str = ft_utoa(num);
 	if (!str)
-		return ;
-	ft_putstr_fd(str, 1);
-	tab->wdt += ft_strlen(str);
-	free(str);
+		return (0);
+	count += ft_putstr_fd(str);
+	return (count);
 }

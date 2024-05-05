@@ -3,23 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hex_upper.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 19:43:24 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 19:51:15 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/05 08:29:02 by kuzi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_hex_upper(t_print *tab)
+int	ft_print_hex_upper(unsigned int num)
 {
-	unsigned int	num;
 	char			*str;
 	unsigned int	count;
 
 	count = 0;
-	num = va_arg(tab->args, unsigned int);
 	str = ft_utoa_hex(num, 'A');
 	if (!str)
 	{

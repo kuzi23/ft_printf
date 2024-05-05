@@ -3,27 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_str.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:10:03 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/04/20 19:08:22 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/05 09:16:13 by kuzi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_print_str(t_print *tab)
+int	ft_putchar_fd(char z)
 {
-	char	*str;
-
-	str = va_arg(tab->args, char *);
-	if (!str)
-		str = "(null)";
-	while (*str)
-	{
-		write(1, str, 1);
-		str++;
-		tab->wdt++;
-	}
-	free(str);
+	write(1, &z, 1);
+	return (1);
 }
+
+int	ft_print_str(char *str)
+{
+	int count;
+	
+	count = 0;
+	if (!str)
+		return (0);
+	while (*str != '\0')
+	{
+		count += ft_putchar_fd(*str);
+		str++;
+	}
+	return (count);
+}
+
