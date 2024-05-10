@@ -6,7 +6,7 @@
 /*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:54:25 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/05 10:50:33 by kuzi             ###   ########.fr       */
+/*   Updated: 2024/05/07 07:10:12 by kuzi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 int	ft_printf(const char *format, ...);
 
 
-/*csiupdXx%*/
+/*csiupdXx*/
 int	ft_print_char(char c);
 int	ft_print_ptr(void *ptr);
 int	ft_print_unsigned(unsigned int n);
