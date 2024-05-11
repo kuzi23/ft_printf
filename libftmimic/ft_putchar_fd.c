@@ -6,12 +6,11 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 09:52:05 by kuzi              #+#    #+#             */
-/*   Updated: 2024/05/01 19:44:07 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/11 13:30:18 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 
 int	ft_putchar_fd(char z)
 {

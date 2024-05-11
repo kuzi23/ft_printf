@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_str.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:10:03 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/05 09:16:13 by kuzi             ###   ########.fr       */
+/*   Updated: 2024/05/11 13:27:35 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	ft_putchar_fd(char z)
 
 int	ft_print_str(char *str)
 {
-	int count;
-	
+	int	count;
+
 	count = 0;
 	if (!str)
 		return (0);
@@ -32,4 +32,3 @@ int	ft_print_str(char *str)
 	}
 	return (count);
 }
-
