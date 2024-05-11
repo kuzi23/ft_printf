@@ -6,11 +6,11 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 15:25:27 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 17:53:45 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/11 15:09:28 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 char	*ft_ptrtoa(void *ptr)
 {

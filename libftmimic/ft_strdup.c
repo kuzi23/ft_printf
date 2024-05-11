@@ -6,11 +6,11 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 12:57:08 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 17:54:13 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/11 15:09:42 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 char	*ft_strdup(const char *s1)
 {

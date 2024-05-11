@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 09:43:18 by kuzi              #+#    #+#             */
-/*   Updated: 2024/05/05 11:27:02 by kuzi             ###   ########.fr       */
+/*   Updated: 2024/05/11 15:09:37 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_putstr_fd(char *str)
 {

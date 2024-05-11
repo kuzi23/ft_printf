@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 15:21:36 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/05 11:08:33 by kuzi             ###   ########.fr       */
+/*   Updated: 2024/05/11 15:09:17 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_countsize(int n)
 {

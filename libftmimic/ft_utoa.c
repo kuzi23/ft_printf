@@ -6,11 +6,11 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 14:23:38 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 17:58:30 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/11 15:09:58 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_countsize(int n)
 {

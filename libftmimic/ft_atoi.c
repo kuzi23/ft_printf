@@ -6,11 +6,11 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 12:25:12 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 17:49:07 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/11 15:09:03 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_atoi(const char *str)
 {

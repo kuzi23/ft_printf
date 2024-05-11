@@ -6,11 +6,11 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 11:02:28 by kuzi              #+#    #+#             */
-/*   Updated: 2024/05/01 17:52:14 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/11 15:09:20 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

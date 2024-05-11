@@ -6,11 +6,11 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 12:24:10 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/01 17:55:08 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/11 15:09:46 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 size_t	ft_strlen(const char *str)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_decimal.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:22:21 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/05 10:29:05 by kuzi             ###   ########.fr       */
+/*   Updated: 2024/05/11 15:08:02 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_print_decimal(int num)
 {

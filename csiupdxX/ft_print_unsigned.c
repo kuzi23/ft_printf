@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuzi <kuzi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:47:10 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/05 10:49:02 by kuzi             ###   ########.fr       */
+/*   Updated: 2024/05/11 15:08:49 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_countsize(int n)
 {

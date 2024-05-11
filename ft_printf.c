@@ -6,7 +6,7 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 05:47:46 by kuzi              #+#    #+#             */
-/*   Updated: 2024/05/11 13:26:28 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/11 15:15:39 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (ret);
 }
-
-// int main()
-// {
-//     ft_printf("hello  rose \n", "marius");
-// }
