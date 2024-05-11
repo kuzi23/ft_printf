@@ -6,13 +6,13 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:47:10 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/11 15:08:49 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/11 17:41:01 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_countsize(int n)
+int	ft_countsize3(int n)
 {
 	int	size;
 	int	num;
@@ -39,7 +39,7 @@ char	*ft_utoa(int num)
 	{
 		return (ft_strdup("0"));
 	}
-	digit_count += ft_countsize(num);
+	digit_count += ft_countsize3(num);
 	str = (char *)malloc(sizeof(char) * (digit_count + 1));
 	if (!str)
 		return (NULL);

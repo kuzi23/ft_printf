@@ -6,7 +6,7 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:54:25 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/11 13:30:04 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/11 16:37:18 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 /*ft_printf*/
 int		ft_printf(const char *format, ...);
 /*csiupdXx*/
-int		ft_print_char(char c);
 int		ft_print_ptr(void *ptr);
 int		ft_print_unsigned(unsigned int n);
 int		ft_print_str(char *str);
@@ -44,4 +43,5 @@ int		ft_putstr_fd(char *str);
 // void	tab_prec_adj(const char *format, int *index, t_print *tab);
 // void	tab_wdt_adj(const char *format, int *index, t_print *tab);
 // remaining alignment na specification of altenate form #
+
 #endif

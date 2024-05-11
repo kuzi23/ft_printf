@@ -6,13 +6,13 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 16:57:54 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/11 15:08:21 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/11 17:40:08 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_countsize(int n)
+int	ft_countsize1(int n)
 {
 	int	size;
 	int	num;
@@ -29,7 +29,7 @@ int	ft_countsize(int n)
 	return (size);
 }
 
-char	*ft_utoa_hex(int num, char c)
+char	*ft_utoa_hex1(int num, char c)
 {
 	int		digit_count;
 	char	*str;
@@ -38,7 +38,7 @@ char	*ft_utoa_hex(int num, char c)
 	digit_count = 0;
 	if (num == 0)
 		return (ft_strdup("0"));
-	digit_count += ft_countsize(num);
+	digit_count += ft_countsize1(num);
 	str = (char *)malloc(sizeof(char) * (digit_count + 1));
 	if (!str)
 		return (NULL);
@@ -63,7 +63,7 @@ int	ft_print_hex(unsigned int num)
 	unsigned int	count;
 
 	count = 0;
-	str = ft_utoa_hex(num, 'a');
+	str = ft_utoa_hex1(num, 'a');
 	while (*str)
 	{
 		count += ft_putchar_fd (*str);
