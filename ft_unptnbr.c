@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_str.c                                     :+:      :+:    :+:   */
+/*   ft_unptnbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 18:10:03 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/11 15:08:36 by mkwizera         ###   ########.fr       */
+/*   Created: 2024/05/15 12:42:37 by mkwizera          #+#    #+#             */
+/*   Updated: 2024/05/15 15:03:55 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
-int	ft_putchar_fd(char z)
+int	ft_unputnbr(unsigned int n)
 {
-	write(1, &z, 1);
-	return (1);
-}
+	unsigned int count;
 
-int	ft_print_str(char *str)
-{
-	int	count;
-
-	count = 0;
-	if (!str)
-		return (0);
-	while (*str != '\0')
+    count = 0;
+	if (n == 4294967295)
 	{
-		count += ft_putchar_fd(*str);
-		str++;
+		return (write(1, "4294967295", 10));
 	}
-	return (count);
+	else if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10);
+		count += ft_putchar_fd(n % 10 + '0');
+	}
+	else
+	{
+		count += ft_putchar_fd(n + '0');
+	}
+    return (count);
 }

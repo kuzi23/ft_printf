@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/02 20:20:42 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/11 15:09:25 by mkwizera         ###   ########.fr       */
+/*   Created: 2024/03/04 09:52:05 by kuzi              #+#    #+#             */
+/*   Updated: 2024/05/15 15:03:38 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_putchar_fd(char z)
 {
-	unsigned char	*str;
-	size_t			i;
-
-	i = 0;
-	str = s;
-	while (i < n)
-	{
-		str[i] = c;
-		i++;
-	}
-	return (s);
+	write(1, &z, 1);
+	return (1);
 }

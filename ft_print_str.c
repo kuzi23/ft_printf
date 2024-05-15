@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_print_str.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/02 12:32:06 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/11 15:09:07 by mkwizera         ###   ########.fr       */
+/*   Created: 2024/04/12 18:10:03 by mkwizera          #+#    #+#             */
+/*   Updated: 2024/05/15 15:06:01 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
-int	ft_isdigit(int dg)
+int	ft_print_str(char *str)
 {
-	if (dg >= 48 && dg <= 57)
+	int	count;
+
+	count = 0;
+	if (!str)
+		return (0);
+	while (*str != '\0')
 	{
-		return (1);
+		count += ft_putchar_fd(*str);
+		str++;
 	}
-	return (0);
+	return (count);
 }

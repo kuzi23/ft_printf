@@ -6,47 +6,43 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 15:16:24 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/11 15:08:25 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/15 15:03:21 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
-char	*ft_ptrtoa(void *ptr)
+int ft_hex(unsigned long n)
 {
-	int					digit_count;
-	char				*str;
-	unsigned long long	adress;
+    int count = 0;
 
-	digit_count = 0;
-	if (!ptr)
-		return (ft_strdup("0x0"));
-	digit_count += 2 * sizeof(void *);
-	str = (char *)malloc(sizeof(char) * (digit_count + 3));
-	if (!str)
-		return (NULL);
-	str[digit_count] = '\0';
-	str[0] = '0';
-	str[1] = 'X';
-	adress = (unsigned long long) ptr;
-	while (digit_count > 2)
+    if (n >= 16)
 	{
-		str[--digit_count] = "0123456789abcdef"[adress % 16];
-		adress /= 16;
-	}
-	return (str);
+        count += ft_hex(n / 16);
+        count += ft_hex(n % 16);
+    }
+	else
+	{
+        if (n <= 9)
+            count += ft_putchar_fd(n + '0');
+        else
+            count += ft_putchar_fd(n - 10 + 'a');
+    }
+    return count;
 }
 
-int	ft_print_ptr(void *ptr)
+int print_hex(unsigned long n)
 {
-	char	*str;
-	int		count;
+    int count = 0;
 
-	count = 0;
-	str = ft_ptrtoa(ptr);
-	if (!str)
-		return (0);
-	count += ft_putstr_fd(str);
-	free(str);
-	return (count);
+    if (n == 0)
+	{
+        return write(1, "0", 1);
+    }
+	else
+	{
+        write(1, "0x", 2);
+        count += ft_hex(n);
+    }
+    return count;
 }
