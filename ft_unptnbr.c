@@ -6,7 +6,7 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 12:42:37 by mkwizera          #+#    #+#             */
-/*   Updated: 2024/05/15 15:03:55 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/15 15:46:06 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_unputnbr(unsigned int n)
 {
-	unsigned int count;
+	unsigned int	count;
 
-    count = 0;
+	count = 0;
 	if (n == 4294967295)
 	{
 		return (write(1, "4294967295", 10));
@@ -30,5 +30,5 @@ int	ft_unputnbr(unsigned int n)
 	{
 		count += ft_putchar_fd(n + '0');
 	}
-    return (count);
+	return (count);
 }

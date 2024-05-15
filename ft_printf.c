@@ -6,7 +6,7 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 05:47:46 by kuzi              #+#    #+#             */
-/*   Updated: 2024/05/15 14:42:49 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/15 15:28:00 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	evalformat(char c, va_list args)
 	else if (c == 'u')
 		ft_unputnbr(va_arg(args, unsigned int));
 	else if (c == 'p')
-		count +=ft_hex(va_arg(args,unsigned long));
+		count += ft_hex(va_arg(args, unsigned long));
 	else if (c == 'x')
 		ft_hexputnbr(va_arg(args, unsigned int), c);
 	else if (c == 'X')
@@ -63,9 +63,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (ret);
 }
-
-// int main()
-// {
-//     ft_printf("Hello world");
-//     return (0);
-// }

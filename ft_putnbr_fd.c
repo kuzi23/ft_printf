@@ -6,7 +6,7 @@
 /*   By: mkwizera <mkwizera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 09:54:32 by kuzi              #+#    #+#             */
-/*   Updated: 2024/05/15 15:03:45 by mkwizera         ###   ########.fr       */
+/*   Updated: 2024/05/15 15:47:13 by mkwizera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void	ft_putchar_fd1(char z)
 	write(1, &z, 1);
 }
 
-
 int	ft_putnbr_fd(int n)
 {
 	if (n == -2147483648)
@@ -53,5 +52,5 @@ int	ft_putnbr_fd(int n)
 	{
 		ft_putchar_fd1(n + '0');
 	}
-	return(length(n,10));
+	return (length(n, 10));
 }
